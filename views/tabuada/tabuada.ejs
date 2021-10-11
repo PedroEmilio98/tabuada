@@ -4,21 +4,21 @@
             <h1>Tabuada do <%= num %>: </h1>
         </div>
         <table class="table text-center">
-            <% for(let i=1; i<=100; i++){ %>
+            <% tabuadas.map( (item)=>{ %>
                 <tr>
                     <td>
-                        <%= i %>
+                        <%= item.i %>
                     </td>
                     <td> x</td>
                     <td>
-                        <%= num %>
+                        <%= item.num %>
                     </td>
                     <td> = </td>
                     <td>
-                        <%= num * i %>
+                        <%= item.resultado %>
                     </td>
                 </tr>
-                <% }%>
+                <% }) %>
         </table>
 
     </div>
